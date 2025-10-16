@@ -57,8 +57,8 @@
       </aside>
 
       <div class="hero-text">
-        <h1 class="reveal">Good Morning,</h1>
-        <h1 class="reveal">Welcome To</h1>
+        <h1 id="greeting" class="reveal"></h1>
+        <h1 class="reveal">Welcome to</h1>
         <h1 class="reveal">Don Bosco Convent School</h1>
       </div>
     </div>
@@ -371,7 +371,26 @@ rightBtn.addEventListener('click', () => {
   gallery.scrollBy({ left: scrollAmount, behavior: 'smooth' });
 });
 
+function updateGreeting() {
+  const now = new Date();
+  const hour = now.getHours();
+  let greetingText = "";
 
+  if (hour >= 5 && hour < 12) {
+    greetingText = "Good Morning";
+  } else if (hour >= 12 && hour < 17) {
+    greetingText = "Good Afternoon";
+  } else if (hour >= 17 && hour < 21) {
+    greetingText = "Good Evening";
+  } else {
+    greetingText = "Good Night";
+  }
+
+  document.getElementById("greeting").textContent = greetingText + ",";
+}
+
+// Call it once on page load
+updateGreeting();
   </script>
 </body>
 </html>
