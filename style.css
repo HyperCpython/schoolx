@@ -230,7 +230,7 @@ nav{display:flex}
 .queries-section{padding:40px 0;background-image:url(Img/sc.png);background-size:cover;position:relative}
 .queries-section::after{content:"";position:absolute;inset:0;background:rgba(0,0,0,0.6)}
 .queries-inner{position:relative;z-index:1;display:flex;gap:30px;align-items:center}
-.queries-form{background:black;padding:18px;border-radius:8px;width:100%;max-width:520px; border: solid 1px white;}
+.queries-form{background:black;padding:18px;border-radius:8px;width:100%;max-width:520px;}
 .queries-form input, .queries-form textarea{margin:8px 0}
 
 /* ---------- GALLERY ---------- */
